@@ -11,7 +11,10 @@ export default function SignIn() {
 
   const checkUser = (name) => {
     let users = JSON.parse(localStorage.getItem("users"));
-    const user = users.find((item) => item.username == name);
+    if (!users) {
+      return false;
+    }
+    const user = users?.find((item) => item.username == name);
     if (user?.username) {
       return true;
     }
