@@ -12,6 +12,7 @@ import ProtectedRoute from "./components/ProtectedRoute";
 import Statistics from "./pages/Statistics";
 import Loader from "./components/Loader";
 import SignIn from "./pages/SignIn";
+import NotFound from "./pages/NotFound";
 function App() {
   const generatedUsername = useAuthChecked();
   if (!generatedUsername) return <Loader />;
@@ -68,6 +69,7 @@ function App() {
             </ProtectedRoute>
           }
         />
+        <Route path="*" element={<NotFound/>} />
       </Routes>
     </BrowserRouter>
   );
