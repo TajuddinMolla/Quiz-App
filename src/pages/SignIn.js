@@ -51,6 +51,7 @@ export default function SignIn() {
             onChange={(e) => setName(e.target.value)}
             className="w-full py-2.5 px-2 rounded-md border mt-4 focus:outline-0"
             type="text"
+            required
             placeholder="Enter User Name"
           />
           <div className="mt-2 text-right text-xs underline">
